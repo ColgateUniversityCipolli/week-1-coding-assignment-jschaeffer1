@@ -32,6 +32,7 @@
 % Note that I have added eval=FALSE so that it won't run
 % each time I compile
 <<eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+# Code to install the aRtsy package
 install.packages("aRtsy")
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,7 +64,7 @@ library(aRtsy)
 set.seed(1)
 canvas_collatz(colors = colorPalette("tuscany3"))
 @
-\caption{A caption...}
+\caption{A canvas collatz}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -81,6 +82,8 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot2>>
+set.seed(1313)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
 \caption{A caption...}
 \label{CollatzPlot2}
@@ -109,6 +112,10 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot3>>
+set.seed(1)
+canvas_collatz(colors = colorPalette("vrolik4"), 
+               background = "#dbdbdb", 
+               n=72, angle.odd = -0.05)
 @
 \caption{A caption...}
 \label{CollatzPlot3}
@@ -145,6 +152,10 @@ package for \texttt{R}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Create a numeric vector containing the integers from 0 to 10 inclusive. Hint -- the solution to this problem is one of these values.\\
 \textbf{Solution:}
+<<size='scriptsize', echo = FALSE>>=
+vec = 0:10
+vec
+@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2b
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
