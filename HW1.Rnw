@@ -32,7 +32,7 @@
 % Note that I have added eval=FALSE so that it won't run
 % each time I compile
 <<eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
-# Code to install the aRtsy package
+install.packages("aRtsy")
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1b
@@ -42,6 +42,7 @@
 \textbf{Solution:}
 % Note here I have removed eval=FALSE so this code will run
 <<size="scriptsize", warning=FALSE, message=FALSE>>=
+library(aRtsy)
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1c
@@ -59,6 +60,8 @@
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
+set.seed(1)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
 \caption{A caption...}
 \label{CollatzPlot1}
