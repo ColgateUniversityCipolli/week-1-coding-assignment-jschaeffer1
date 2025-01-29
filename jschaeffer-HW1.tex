@@ -231,6 +231,10 @@
 package for \texttt{R}.\citep{aRtsy}
 \end{enumerate}
 
+\begin{tiny}
+\bibliography{bibliography}
+\end{tiny}
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,22 +261,46 @@ package for \texttt{R}.\citep{aRtsy}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
-
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##  [1]    2.5    5.0   10.0   20.0   40.0   80.0  160.0  320.0  640.0 1280.0
+## [11] 2560.0
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{result.index} \hlkwb{=} \hlkwd{which}\hldef{(solution.vec} \hlopt{==} \hlnum{40}\hldef{)}
+\hldef{result.index}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
 \textbf{Solution:}
+\\
+This would not work becuase our solution required the exact answer being present in our vector. In the example shown above, we would not be able to find the accurate answer becuase it requires an approximation. Therefore, the which function would not work properly.
 \end{enumerate}
 \end{enumerate}
 

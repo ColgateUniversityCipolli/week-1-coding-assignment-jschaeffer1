@@ -1,54 +1,4 @@
-\documentclass{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
-% maxwidth is the original width if it is less than linewidth
-% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
-}
-\makeatother
-
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlsng}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hldef}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
-
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
-
-\usepackage{alltt}
+\documentclass{article}
 \usepackage[margin=1.0in]{geometry} % To set margins
 \usepackage{amsmath}  % This allows me to use the align functionality.
                       % If you find yourself trying to replicate
@@ -62,7 +12,7 @@
 \usepackage{float}    % For telling R where to put a table/figure
 \usepackage{natbib}        %For the bibliography
 \bibliographystyle{apalike}%For the bibliography
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
 \begin{document}
 
 \begin{enumerate}
@@ -81,14 +31,10 @@
 \textbf{Solution:}
 % Note that I have added eval=FALSE so that it won't run
 % each time I compile
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{# Code to install the aRtsy package}
-\hlkwd{install.packages}\hldef{(}\hlsng{"aRtsy"}\hldef{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+<<eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+# Code to install the aRtsy package
+install.packages("aRtsy")
+@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1b
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,13 +42,9 @@
   We need to load the library each time it is run.\\
 \textbf{Solution:}
 % Note here I have removed eval=FALSE so this code will run
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{library}\hldef{(aRtsy)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+<<size="scriptsize", warning=FALSE, message=FALSE>>=
+library(aRtsy)
+@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,22 +53,17 @@
  will find a link to a tutorial. Recreate the first figure they make using 
  \texttt{canvas\_collatz()}. Make sure to update the caption.\\
 \textbf{Solution:}
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{# help("aRtsy")}
-\hlkwd{set.seed}\hldef{(}\hlnum{1}\hldef{)}
-\hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"tuscany3"}\hldef{))}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+<<CollatzPlot1, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+# help("aRtsy")
+set.seed(1)
+canvas_collatz(colors = colorPalette("tuscany3"))
+@
 %Code to insert a figure [H]ere
 \begin{figure}[H]
 \begin{center}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
-\end{knitrout}
+<<echo=FALSE,fig.dim=c(4,4)>>=
+<<CollatzPlot1>>
+@
 \caption{A basic canvas collatz with a seed of 1}
 \label{CollatzPlot1}
 \end{center}
@@ -138,21 +75,16 @@
   numbers generated to create the plot. Can you see the difference? Make sure to 
   update the caption.\\
 \textbf{Solution:}
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{set.seed}\hldef{(}\hlnum{1313}\hldef{)}
-\hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"tuscany3"}\hldef{))}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+<<CollatzPlot2, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(1313)
+canvas_collatz(colors = colorPalette("tuscany3"))
+@
 %Code to insert a figure [H]ere
 \begin{figure}[H]
 \begin{center}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-4-1} 
-\end{knitrout}
+<<echo=FALSE,fig.dim=c(4,4)>>=
+<<CollatzPlot2>>
+@
 \caption{A canvas collatz with a set seed of 1313}
 \label{CollatzPlot2}
 \end{center}
@@ -173,23 +105,18 @@
   (note this is the default).
   \end{itemize}
 \textbf{Solution:}
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{set.seed}\hldef{(}\hlnum{1}\hldef{)}
-\hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"vrolik4"}\hldef{),}
-               \hlkwc{background} \hldef{=} \hlsng{"#dbdbdb"}\hldef{,}
-               \hlkwc{n}\hldef{=}\hlnum{72}\hldef{,} \hlkwc{angle.odd} \hldef{=} \hlopt{-}\hlnum{0.05}\hldef{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+<<CollatzPlot3, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(1)
+canvas_collatz(colors = colorPalette("vrolik4"), 
+               background = "#dbdbdb", 
+               n=72, angle.odd = -0.05)
+@
 %Code to insert a figure [H]ere
 \begin{figure}[H]
 \begin{center}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-5-1} 
-\end{knitrout}
+<<echo=FALSE,fig.dim=c(4,4)>>=
+<<CollatzPlot3>>
+@
 \caption{A canvas collatz using a gray background, odd angle=-0.05, n=72}
 \label{CollatzPlot3}
 \end{center}
@@ -202,21 +129,16 @@
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
   
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{set.seed}\hldef{(}\hlnum{15}\hldef{)}
-\hlkwd{canvas_flame}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"dark2"}\hldef{))}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
+<<FlamePlot1, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(15)
+canvas_flame(colors = colorPalette("dark2"))
+@  
   
 \begin{figure}[H]
 \begin{center}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
-\end{knitrout}
+<<echo=FALSE,fig.dim=c(4,4)>>=
+<<FlamePlot1>>
+@
 \caption{A canvas flame plot with a set seed of 15}
 \label{CollatzPlot3}
 \end{center}
@@ -230,6 +152,10 @@
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
 package for \texttt{R}.\citep{aRtsy}
 \end{enumerate}
+
+\begin{tiny}
+\bibliography{bibliography}
+\end{tiny}
 
 \newpage
 
@@ -245,34 +171,43 @@ package for \texttt{R}.\citep{aRtsy}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Create a numeric vector containing the integers from 0 to 10 inclusive. Hint -- the solution to this problem is one of these values.\\
 \textbf{Solution:}
-\begin{knitrout}\scriptsize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-##  [1]  0  1  2  3  4  5  6  7  8  9 10
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
+<<size='scriptsize', echo = FALSE>>=
+vec = 0:10
+vec
+@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2b
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
-
+<<size='scriptsize', echo = FALSE>>=
+solution.vec = 2^(vec+1)+2^(vec-1)
+solution.vec
+@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
+<<size='scriptsize', eval = FALSE>>=
+result.index = which(solution.vec == 40)
+result.index
+@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
 \textbf{Solution:}
+<<size='scriptsize', echo = FALSE>>=
+which(solution.vec == 40)
+@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
 \textbf{Solution:}
+\\
+This would not work becuase our solution required the exact answer being present in our vector. In the example shown above, we would not be able to find the accurate answer becuase it requires an approximation. Therefore, the which function would not work properly.
 \end{enumerate}
 \end{enumerate}
 

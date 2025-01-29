@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.28)  29 JAN 2025 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.28)  29 JAN 2025 16:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/jcslo/OneDrive/Documents/GitHub/week-1-coding-assignment-jschaeffer1/HW1.tex
-(c:/Users/jcslo/OneDrive/Documents/GitHub/week-1-coding-assignment-jschaeffer1/HW1.tex
+**C:/Users/jcslo/OneDrive/Documents/GitHub/week-1-coding-assignment-jschaeffer1/jschaeffer-HW1.tex
+(c:/Users/jcslo/OneDrive/Documents/GitHub/week-1-coding-assignment-jschaeffer1/jschaeffer-HW1.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -293,12 +293,12 @@ LaTeX Info: Redefining \cite on input line 694.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count304
 \l__pdf_internal_box=\box58
-) (./HW1.aux
+) (./jschaeffer-HW1.aux
 
 LaTeX Warning: Label `CollatzPlot3' multiply defined.
 
 )
-\openout1 = `HW1.aux'.
+\openout1 = `jschaeffer-HW1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
@@ -359,9 +359,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 66.
-(./HW1.out) (./HW1.out)
+(./jschaeffer-HW1.out) (./jschaeffer-HW1.out)
 \@outlinefile=\write4
-\openout4 = `HW1.out'.
+\openout4 = `jschaeffer-HW1.out'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 88.
@@ -410,32 +410,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.227   \item U
-               se \texttt{citation()} to get the BiBTeX citation for the \te... <./figure/unnamed-chunk-5-1.pdf>]
-
-Package natbib Warning: Citation `aRtsy' on page 4 undefined on input line 231.
-
-
+               se \texttt{citation()} to get the BiBTeX citation for the \te... <./figure/unnamed-chunk-5-1.pdf>] (./jschaeffer-HW1.bbl)
 
 [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.234 \newpage
+l.238 \newpage
                <./figure/unnamed-chunk-6-1.pdf>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 241.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 245.
 (c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 241.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 245.
 (c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package natbib Warning: There were undefined citations.
-
-
-
-[5] (./HW1.aux)
+[5] (./jschaeffer-HW1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -443,22 +435,22 @@ L3 programming layer <2024-12-25>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `HW1.out' has not changed.
+Package rerunfilecheck Info: File `jschaeffer-HW1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11177 strings out of 475178
- 175155 string characters out of 5764492
- 593325 words of memory out of 5000000
- 34014 multiletter control sequences out of 15000+600000
- 561683 words of font info for 49 fonts, out of 8000000 for 9000
+ 11199 strings out of 475178
+ 175740 string characters out of 5764492
+ 593404 words of memory out of 5000000
+ 34028 multiletter control sequences out of 15000+600000
+ 562637 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,6n,79p,385b,701s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on HW1.pdf (5 pages, 387226 bytes).
+ 75i,6n,79p,396b,701s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Users/jcslo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on jschaeffer-HW1.pdf (5 pages, 422323 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
+ 26 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
